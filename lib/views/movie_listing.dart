@@ -17,6 +17,7 @@ class MovieListing extends StatelessWidget {
       drawer: const NavDrawer(),
       body: Container(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(
         'Naked Gun 4 (2025)',
@@ -34,6 +35,4 @@ class MovieListing extends StatelessWidget {
   ),
     ));
   }
-
-
 }
