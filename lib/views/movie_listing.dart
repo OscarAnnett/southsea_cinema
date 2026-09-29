@@ -7,6 +7,8 @@ const MovieListing({super.key});
   @override
   State<MovieListing> createState() => _MovieListingState();
 }
+Color buttonColour = Colors.white;
+String buttonText = 'Add To Order';
 class _MovieListingState extends State<MovieListing> {
   int selectedTickets = 0;
   @override
@@ -51,7 +53,15 @@ class _MovieListingState extends State<MovieListing> {
           ],
       
       ),
-    ],
+      ElevatedButton(
+      onPressed: () {setState(() {
+      buttonColour = Colors.blueGrey; buttonText = 'Added!';
+    });},
+      child: Text(buttonText,style: TextStyle(color: Colors.black),),
+      style: ElevatedButton.styleFrom(
+      backgroundColor: buttonColour,
+      )
+          )],
   ),
     ));
   }
