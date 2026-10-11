@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/models/movie.dart';
+import 'package:southsea_cinema/constants.dart';
 
 class MovieCard extends StatelessWidget {
   final Movie movie;
@@ -14,6 +15,7 @@ class MovieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: cinemaSurface,
       margin: const EdgeInsets.symmetric(
         horizontal: 16,
         vertical: 8,
