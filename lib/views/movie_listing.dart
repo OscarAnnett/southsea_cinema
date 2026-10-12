@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
+import 'package:southsea_cinema/models/movie.dart';
 
 class MovieListing extends StatefulWidget {
-  const MovieListing({super.key});
+  final Movie movie;
+  const MovieListing({super.key, required this.movie});
   @override
   State<MovieListing> createState() => _MovieListingState();
 }
@@ -29,9 +31,11 @@ class _MovieListingState extends State<MovieListing> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Naked Gun 4 (2025)',
+                widget.movie.title,
                 style: TextStyle(fontSize: 30),
               ),
+              Image.asset(widget.movie.imagePath, width: 200)
+              ,
               Text(
                 'Southsea Cinema Room\nThursday 28th October 2026\n\nPlease note that Discounts / Membership Benefits will be applied once you have selected your tickets\nSelect Quantities (Up to 5 in total)',
                 style: TextStyle(fontSize: 16),
