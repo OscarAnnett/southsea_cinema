@@ -34,8 +34,7 @@ class _MovieListingState extends State<MovieListing> {
                 widget.movie.title,
                 style: TextStyle(fontSize: 30),
               ),
-              Image.asset(widget.movie.imagePath, width: 200)
-              ,
+              Image.asset(widget.movie.imagePath, width: 200),
               Text(
                 'Southsea Cinema Room\nThursday 28th October 2026\n\nPlease note that Discounts / Membership Benefits will be applied once you have selected your tickets\nSelect Quantities (Up to 5 in total)',
                 style: TextStyle(fontSize: 16),
@@ -79,9 +78,7 @@ class _MovieListingState extends State<MovieListing> {
                   child: Text(
                     buttonText,
                     style: TextStyle(color: Colors.black),
-                  )
-                  
-                  )
+                  ))
             ],
           ),
         ));

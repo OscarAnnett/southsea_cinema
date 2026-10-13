@@ -20,19 +20,19 @@ class MovieCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(
         horizontal: 16,
         vertical: 8,
-    ),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-              Image.asset(
-              movie.imagePath,
-              width: 100,
-              height: 140,
+                Image.asset(
+                  movie.imagePath,
+                  width: 100,
+                  height: 140,
                   fit: BoxFit.cover,
                 ),
                 const SizedBox(width: 16),
@@ -43,27 +43,38 @@ class MovieCard extends StatelessWidget {
                       Text(
                         movie.title,
                         style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                    ),),
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       const SizedBox(height: 8),
                       Text('Age rating: ${movie.ageRating}'),
                       const SizedBox(height: 8),
-                    Text(movie.synopsis),
-                    ],),),
+                      Text(movie.synopsis),
+                    ],
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 16),
-          Text('Runtime: ${movie.runTime}'),
+            Text('Runtime: ${movie.runTime}'),
             Text('Release date: ${movie.releaseDate}'),
-          const SizedBox(height: 8),
+            const SizedBox(height: 8),
             Align(
               alignment: Alignment.centerRight,
               child: ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => MovieListing(movie: movie)));},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MovieListing(movie: movie)));
+                },
                 child: const Text('Book Tickets'),
               ),
             ),
           ],
-        ),),);}
+        ),
+      ),
+    );
+  }
 }
