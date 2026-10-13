@@ -61,7 +61,7 @@ class _MovieListingState extends State<MovieListing> {
                     },
                   ),
                   Text(
-                    'Adult',
+                    'Adult (${widget.movie.formattedPrice})',
                     style: TextStyle(fontSize: 16),
                   ),
                 ],

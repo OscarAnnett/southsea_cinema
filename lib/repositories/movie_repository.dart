@@ -10,7 +10,8 @@ class MovieRepository {     //Repositories store my data which is better than ha
         synopsis: 'Lt. Frank Drebin Jr. must succeed in his fathers footsteps to prevent the closure of Police Squad.',
         releaseDate: '2025-08-01',
         runTime: '85 min',
-        imagePath: 'assets/images/The_Naked_Gun_2025.jpg'
+        imagePath: 'assets/images/The_Naked_Gun_2025.jpg',
+        price: 10.00
       ),
       Movie(
         id: 'eyes-wide-shut-1999',
@@ -19,7 +20,8 @@ class MovieRepository {     //Repositories store my data which is better than ha
        synopsis: 'A doctors life unravels after he unmasks a secret society.',
        releaseDate: '1999-08-01',
        runTime: '159 min',
-       imagePath: 'assets/images/Eyes_Wide_Shut_1999.jpg'
+       imagePath: 'assets/images/Eyes_Wide_Shut_1999.jpg',
+       price: 16.00
 ),
 ];
   }
